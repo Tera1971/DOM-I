@@ -49,15 +49,55 @@ nav.forEach(elements => {
   nav[4].textContent = "About";
   nav[5].textContent = "Contact";
 });
+nav.forEach(link => link.style.color ='green')
+
+const newNav = document.createElement('a')
+const mainNav = document.querySelector('nav')
+newNav.innerText = 'Reviews'
+newNav.href = '#'
+mainNav.prepend(newNav)
+newNav.style.color = 'green'
+
+const newNav2 = document.createElement('a')
+const mainNav2 = document.querySelector('nav')
+newNav2.innerText = 'FAQ'
+newNav2.href = '#'
+mainNav2.append(newNav2)
+newNav2.style.color = 'green'
 
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let h1 = document.querySelector(".cta .h1");
-h1.innerHTML = "DOM<br> Is<br> Awesome";
-
-let headerImg = document.getElementById("img/header-img.png");
+let heading = document.querySelector("h1");
+heading.innerHTML = "DOM<br> Is<br> Awesome";
+let button = document.querySelector('button');
+button.innerText = "Get Started"
+let headerImg = document.querySelector("#cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
-// let middleImg = querySelector("img/mid-page-accent.jpg");
-// middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+let mainContent = document.querySelectorAll('.text-content')
+
+mainContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+mainContent[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+mainContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+mainContent[1].querySelector('p').textContent = siteContent['main-content']['about-content']
+mainContent[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainContent[2].querySelector('p').textContent = siteContent['main-content']['services-content']
+mainContent[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainContent[3].querySelector('p').textContent = siteContent['main-content']['product-content']
+mainContent[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainContent[4].querySelector('p').textContent = siteContent['main-content']['vision-content']
+
+let middleImage = document.querySelector("#middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contactInfo = document.querySelector('.contact')
+
+contactInfo.getElementsByTagName('h4')[0].textContent = siteContent["contact"]["contact-h4"]
+contactInfo.getElementsByTagName('p')[0].textContent = siteContent["contact"]["address"]
+contactInfo.getElementsByTagName('p')[1].textContent = siteContent["contact"]["phone"]
+contactInfo.getElementsByTagName('p')[2].textContent = siteContent["contact"]["email"]
+
+let footer = document.querySelector('footer')
+
+footer.innerText = "Copyright Great Idea! 2018" 

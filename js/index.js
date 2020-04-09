@@ -37,6 +37,27 @@ const siteContent = {
   },
 };
 
+
+
 // Example: Update the img src for the logo
+let nav = document.querySelectorAll('a');
+nav.forEach(elements => {
+  nav[0].textContent = "Services";
+  nav[1].textContent = "Product";
+  nav[2].textContent = "Vision";
+  nav[3].textContent = "Features";
+  nav[4].textContent = "About";
+  nav[5].textContent = "Contact";
+});
+
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let h1 = document.querySelector(".cta .h1");
+h1.innerHTML = "DOM<br> Is<br> Awesome";
+
+let headerImg = document.getElementById("img/header-img.png");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+// let middleImg = querySelector("img/mid-page-accent.jpg");
+// middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
